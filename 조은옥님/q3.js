@@ -1,7 +1,7 @@
 var result = {};
 
 // TODO: 
-db.site.createIndex({'centroid': '2dsphere'})
+
 
 var eq = db.earthquake.find(
     {'magnitude': {$gte: m}}

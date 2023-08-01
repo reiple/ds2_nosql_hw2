@@ -1,12 +1,6 @@
 var siteIds = [];
 // TODO: 
-// create text index for search
-db.site.createIndex({'properties.type': 'text',
-                    'properties.name': 'text',
-                    'properties.description': 'text'},
-                    {name: "siteIndex"});
-// create 2dsphere index for geometry search
-db.site.createIndex({'centroid': '2dsphere'})
+
 
 // variable school contains the data which has exact "school field" on its property
 var school = db.site.find({"$text": {$search: "\"School Field\""}});
